@@ -1,19 +1,19 @@
 import java.util.*;
 
 public class ABC{
-	public static void main(String[] args){
+	public static void main(String... args){
 		Scanner obj = new Scanner(System.in);
-		System.out.println("Enter the number of row : ");
-		int row = obj.nextInt();
+		System.out.println("Enter the number of Rows : ");
+		int rows = obj.nextInt();
+		//char ch = 'A';
 
-		char ch = 'A';
-		for(int i=1; i<=row; i++){
-			for(int j=1; j<=i; j++ ){
+		for(int i=1; i<=rows; i++){
+			for(char ch='A'; ch < 'A'+i; ch++){
 				System.out.print(ch+" ");
-				ch++;
+				
 			}
-		System.out.println();
+			System.out.println();
+			//ch++;
 		}
-		
 	}
 }
