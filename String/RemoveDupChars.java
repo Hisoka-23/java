@@ -9,12 +9,15 @@ import java.util.*;
 
 public class RemoveDupChars{
 	public static void main(String[] args){
-		String str = "programming";
+			Scanner obj = new Scanner(System.in);
+		System.out.println("Enter the value of String...!");
+		String str = obj.nextLine();
 
 		//Approach - 1
 		StringBuilder sb1 = new StringBuilder();
 		str.chars().distinct().forEach(c -> sb1.append((char)c));
-		System.out.println(sb1);
+
+		System.out.println(sb1);		
 
 		//Approach - 2
 		StringBuilder sb2 = new StringBuilder();
@@ -24,9 +27,8 @@ public class RemoveDupChars{
 			if(idx == -1){
 				sb2.append(ch);
 			}
-		}
-		System.out.println(sb2);
-
+		}		
+		
 		//Approach - 3
 		char[] arr = str.toCharArray();
 		StringBuilder sb3 = new StringBuilder();
@@ -46,15 +48,16 @@ public class RemoveDupChars{
 
 		//Approach - 4
 		StringBuilder sb4 = new StringBuilder();
-		Set<Character> set = new LinkedHashSet();
+		Set<Character> set = new LinkedHashSet<>();
 		for(int i=0; i<str.length(); i++){
 			set.add(str.charAt(i));
 		}
 
-		for(Character c : set ){
+		for(Character c : set){
 			sb4.append(c);
 		}
 
 		System.out.println(sb4);
+		
 	}
 }
